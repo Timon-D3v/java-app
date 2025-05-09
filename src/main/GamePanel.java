@@ -31,7 +31,7 @@ public class GamePanel extends JPanel implements Runnable {
     // Set players default position
     int playerX = 100;
     int playerY = 100;
-    int playerSpeed = 1; // (BASE_FPS (60) / FPS (240)) * 4
+    final int playerSpeed = 1; // (BASE_FPS (60) / FPS (240)) * 4
 
     public GamePanel() {
 
@@ -121,7 +121,7 @@ public class GamePanel extends JPanel implements Runnable {
 
         super.paintComponent(graphics);
 
-        Graphics2D graphics2d = (Graphics2D) graphics; // Cast to Graphics2D for advanced graphics
+        final Graphics2D graphics2d = (Graphics2D) graphics; // Cast to Graphics2D for advanced graphics
 
         // Draw the player as a white square
         graphics2d.setColor(Color.white); // Set the color to white
