@@ -51,9 +51,9 @@ public class GamePanel extends JPanel implements Runnable {
     @Override
     public void run() {
         
-        double targetTime = 1e9; // 1 second in nanoseconds
+        double targetTime = 1e9d; // 1 second in nanoseconds
         double drawInterval = targetTime / FPS; // Time between frames in nanoseconds 
-        double delta = 0; // Time accumulated since the last frame
+        double delta = 0d; // Time accumulated since the last frame
         long lastTime = System.nanoTime(); // Get the current time in nanoseconds
         long currentTime; // Variable to store the current time
 
