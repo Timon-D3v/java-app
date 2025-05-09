@@ -82,7 +82,7 @@ public class GamePanel extends JPanel implements Runnable {
                 frameTimestampsDeque.addLast(now);
 
                 // Remove timestamps older than 1000ms
-                while (!frameTimestampsDeque.isEmpty() && frameTimestampsDeque.peekFirst() < now - 1000) {
+                while (!frameTimestampsDeque.isEmpty() && frameTimestampsDeque.peekFirst() <= now - 1000) {
 
                     frameTimestampsDeque.removeFirst();
 
